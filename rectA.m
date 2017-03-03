@@ -20,7 +20,7 @@ if nargin < 3
         refPoint(2) = (box(2, 1) + box(2, 3)) / 2;
     end
 end
-%theta = - theta; % reverse ?(image)
+theta = - theta; % reverse ?(image)
 if size(box, 1) == 1
     X = [box(1), box(1) + box(3), box(1) + box(3), box(1)];
     Y = [box(2), box(2), box(2) + box(4), box(2) + box(4)];
@@ -34,12 +34,12 @@ C(1, :) = floor(C(1, :) + (1 - cos(theta)) * refPoint(1) - sin(theta) * refPoint
 C(2, :) = floor(C(2, :) + (1 - cos(theta)) * refPoint(2) + sin(theta) * refPoint(1));
 
 
-patch('XData', X, 'YData', Y, ...
-    'EdgeColor', 'm','FaceColor','none','LineWidth',2);
-hold on;
-plot(X, Y, 'yo');
-patch('XData', C(1,:), 'YData', C(2,:), ...
-    'EdgeColor', 'b','FaceColor','none','LineWidth',2);
-axis equal;
+% patch('XData', X, 'YData', Y, ...
+%     'EdgeColor', 'm','FaceColor','none','LineWidth',2);
+% hold on;
+% plot(X, Y, 'yo');
+% patch('XData', C(1,:), 'YData', C(2,:), ...
+%     'EdgeColor', 'b','FaceColor','none','LineWidth',2);
+% axis equal;
 
 end
