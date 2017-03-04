@@ -39,7 +39,7 @@ else % rotate to vertical
     end
 end
 % rotate the poly
-anglePoly = rectA(poly, -theta);
+anglePoly = rotateBoxPoly(poly, -theta);
 xmin = min(anglePoly(1,:));
 xmax = max(anglePoly(1,:));
 ymin = min(anglePoly(2,:));
