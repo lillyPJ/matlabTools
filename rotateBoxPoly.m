@@ -30,8 +30,8 @@ else
 end
 Z = [cos(theta), sin(theta); -sin(theta), cos(theta)];
 C = Z * [X;Y];
-C(1, :) = floor(C(1, :) + (1 - cos(theta)) * refPoint(1) - sin(theta) * refPoint(2));
-C(2, :) = floor(C(2, :) + (1 - cos(theta)) * refPoint(2) + sin(theta) * refPoint(1));
+C(1, :) = C(1, :) + (1 - cos(theta)) * refPoint(1) - sin(theta) * refPoint(2);
+C(2, :) = C(2, :) + (1 - cos(theta)) * refPoint(2) + sin(theta) * refPoint(1);
 
 
 % patch('XData', X, 'YData', Y, ...

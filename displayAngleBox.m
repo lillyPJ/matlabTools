@@ -11,3 +11,4 @@ for i = 1:m
     patch('XData', rotateBox(1,:), 'YData', rotateBox(2,:), ...
     'EdgeColor', color,'FaceColor','none','LineWidth',2);   
 end
+hold off;

@@ -12,3 +12,4 @@ for i = 1:nPoly
     patch('XData', poly(i, 1:2:8), 'YData', poly(i, 2:2:8), ...
         'EdgeColor', color,'FaceColor','none','LineWidth',2);
 end
+hold off
