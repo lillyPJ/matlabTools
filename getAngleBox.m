@@ -1,10 +1,14 @@
-function [angleBox, anglePoly] = getAngleBox(poly)
+function [angleBox, anglePoly] = getAngleBox(poly, refPoint)
 % input: bb-[x1, x2, x3, x4; y1, y2, y3, y4]
+% [input] refPoint = [refX, refY] (default: refPoint = center)
 % output: angleBox-[x, y, w, h, angle]
 % output: angleBB-[x1, x2, x3, x4; y1, y2, y3, y4] of angleBox
 % theta = the angle from box to poly, 
 % theta > 0 = clockwise, < 0 = anti
 
+if nargin < 2
+    refPoint = [];
+end
 
 % find the longest side
 diffs = diff(poly'); % x2-x1, y2-y1; x3-x2, y3-y2; x4-x3, y4-y3;
@@ -39,7 +43,7 @@ else % rotate to vertical
     end
 end
 % rotate the poly
-anglePoly = rotateBoxPoly(poly, -theta);
+anglePoly = rotateBoxPoly(poly, -theta, refPoint);
 xmin = min(anglePoly(1,:));
 xmax = max(anglePoly(1,:));
 ymin = min(anglePoly(2,:));
