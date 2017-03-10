@@ -13,6 +13,6 @@ for i = 1:m
     rotateBox = rotateBoxPoly(box(i, 1:4), box(i, 5), refPoint);
     %displayBox(box);
     patch('XData', rotateBox(1,:), 'YData', rotateBox(2,:), ...
-    'EdgeColor', color,'FaceColor','none','LineWidth',2);   
+    'EdgeColor', color,'FaceColor','none','LineWidth',1);   
 end
 hold off;

@@ -10,6 +10,6 @@ hold on
 nPoly = size(poly, 1);
 for i = 1:nPoly
     patch('XData', poly(i, 1:2:8), 'YData', poly(i, 2:2:8), ...
-        'EdgeColor', color,'FaceColor','none','LineWidth',2);
+        'EdgeColor', color,'FaceColor','none','LineWidth',1);
 end
 hold off

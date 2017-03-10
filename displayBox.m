@@ -15,7 +15,7 @@ for i = 1:m
     if( showScore )
         switch(pos)
             case 'u'
-                text(box(i, 1)+box(i, 3)/2-10, box(i, 2)-10, sprintf('%.f', box(i, dimscore)), 'BackgroundColor', 'w', 'Color', 'm', 'FontWeight', 'demi');
+                text(box(i, 1)+box(i, 3)/2-10, box(i, 2)-10, sprintf('%.2f', box(i, dimscore)), 'BackgroundColor', 'w', 'Color', 'm', 'FontWeight', 'demi');
             case 'm'
                 text(box(i, 1)+box(i, 3)/2-10, box(i, 2)+box(i, 4)/2, sprintf('%.2f', box(i, dimscore)), 'BackgroundColor', 'w', 'Color', 'r', 'FontWeight', 'demi');
             case 'd'
